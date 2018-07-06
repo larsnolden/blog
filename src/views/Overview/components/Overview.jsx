@@ -7,6 +7,8 @@ import ContentWrapper from 'elements/ContentWrapper';
 
 import rhineBackgroundPicture from 'assets/Panorama_of_the_Rhine_in_Cologne.jpg';
 
+import { Link } from 'react-router-dom';
+
 const ArticleListWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -33,6 +35,7 @@ export default ({ articles }) => (
         <Year>
           2018
         </Year>
+        <Link to="article/1">Article 1</Link>
         {articles.map(
           article => <Article
             title={article.title}

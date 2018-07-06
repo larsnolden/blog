@@ -3,11 +3,13 @@ import styled from 'styled-components';
 import RenderGist from 'react-render-gist';
 import Heading from 'elements/Heading'; 
 import {
-  $hoverBlue
+  $hoverBlue,
+  $semiBold,
 } from 'styleVariables';
 
 const Text = styled.div`
   margin-top: 40px;
+  letter-spacing: 0.5px;
 `;
 
 const Image = styled.img`
@@ -17,13 +19,16 @@ const Image = styled.img`
   margin-top: 40px;
 `;
 
-const ImageCaption = styled.div``;
+const ImageCaption = styled.div`
+  letter-spacing: 0.5px;
+  font-weight: ${$semiBold};
+`;
 
 const ListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
 `;
 
 const MarginWrapper = styled.div`
@@ -84,7 +89,7 @@ export default ({ type, value }) => {
         <MarginWrapper>
           <RenderGist gist={value} />
         </MarginWrapper>
-      )
+      );
 
     default:
       return <div />

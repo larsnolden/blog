@@ -6,7 +6,7 @@ import testContent from 'assets/testContent.json';
 const mapStateToProps = state => ({
   name: 'Testing with Jest',
   dateCreated: '2nd November 2018',
-  heroImageUrl: 'http://localhost:3000/static/media/Panorama_of_the_Rhine_in_Cologne.6d9d3e7b.jpg',
+  heroImageUrl: 'https://i.imgur.com/HSqPaLA.jpg',
   content: testContent.content,
 });
 

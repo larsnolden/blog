@@ -8,6 +8,7 @@ import Heading from 'elements/Heading';
 import ContentGenerator from './ContentGenerator';
 
 const Date = styled.div`
+  margin-top: 10px;
   font-size: 1.5rem;
 `;
 

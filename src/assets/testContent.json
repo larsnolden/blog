@@ -21,12 +21,17 @@
       "value": "Writing blog posts about jest"
     },
     {
-      "yindex": 7,
+      "yindex": 8,
       "type": "text",
       "value": "Writing blog posts about jest can take up a lot of writing space, Writing blog posts about jest can take up a lot of writing space, Writing blog posts about jest can take up a lot of writing space, Writing blog posts about jest can take up a lot of writing space, Writing blog posts about jest can take up a lot of writing space, Writing blog posts about jest can take up a lot of writing space"
     },
     {
       "yindex": 6,
+      "type": "heading",
+      "value": "Lists are a thing"
+    },
+    {
+      "yindex": 7,
       "type": "list",
       "value": ["Google: https://google.com", "bing"]
     },
