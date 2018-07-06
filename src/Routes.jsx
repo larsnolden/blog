@@ -5,11 +5,15 @@ import {
 } from "react-router-dom";
 
 import Overview from 'views/Overview/container/Overview';
+import Article from 'views/Article/container/Article';
 
 export default () => (
   <div>
     <Router>
-      <Route component={Overview} path="/" />
+      <div>
+        <Route component={Overview} exact={true} path="/" />
+        <Route component={Article} path="/article/:id" />
+      </div>
     </Router>
   </div>
 );

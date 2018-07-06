@@ -1,7 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 import Navigation from 'elements/Navigation';
 import Header from 'elements/Header';
-import styled from 'styled-components';
 import Article from './Article';
 import ContentWrapper from 'elements/ContentWrapper';
 
