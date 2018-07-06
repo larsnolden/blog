@@ -13,6 +13,12 @@ const Wrapper = styled.div`
 const ContentWrapper = styled.div`
   width: 900px;
   height: 100%;
+  @media (max-width: 600px) {
+    width: auto;
+    min-width: 0;
+    padding: 2rem;
+    margin-top: 25px;
+  }
 `;
 
 export default ({ children }) => (

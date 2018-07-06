@@ -13,10 +13,6 @@ const ArticleListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  @media (max-width: 600px) {
-    padding: 2rem;
-    margin-top: 25px;
-  }
 `;
 
 const Year = styled.div`
