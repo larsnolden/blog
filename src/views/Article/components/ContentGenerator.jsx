@@ -28,15 +28,25 @@ const ListItem = styled.div``;
 
 const List = ({ items }) => (
   <ListWrapper>
-    { items.map(item => <ListItem>item</ListItem>) }
+    { items.map(item => <ListItem>{wrapLinksInText(item)}</ListItem>) }
   </ListWrapper>
 );
 
+const StyledAnchor = styled.a``;
+
+// wrap links in styledAnchir
+const wrapLinksInText = (string) => string
+  .split(/(https?:\/\/[^\s]+)/g)
+  .reduce((acc, current) => {
+    //  only wrap true Links
+    if(current.match(/(https?:\/\/[^\s]+)/g)) return [...acc, <StyledAnchor href={current}>{current}</StyledAnchor>];
+    return [...acc, current];
+  }, []);
+
 export default ({ type, value }) => {
-  console.log(type);
   switch(type) {
     case "text":
-      return <Text>{value}</Text>
+      return <Text>{wrapLinksInText(value)}</Text>
 
     case "image":
       return <Image src={value} />
@@ -53,4 +63,4 @@ export default ({ type, value }) => {
     default:
       return <div />
   }
-}
+};
