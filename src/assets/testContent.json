@@ -2,21 +2,26 @@
   "content": [
     {
       "yindex": 1,
-      "type": "heading",
-      "value": "Testing with Jest"
-    },
-    {
-      "yindex": 2,
       "type": "text",
       "value": "This is an intro to testing with Jest, this first paragraph will consume lots of space. There is a new feature on the internet called \"Link\", it looks like this: https://google.com this first paragraph will consume lots of space.this first paragraph will consume lots of space.this first paragraph will consume lots of space. this first paragraph will consume lots of space.this first paragraph will consume lots of space. this first paragraph will consume lots of space.this first paragraph will consume lots of space. this first paragraph will consume lots of space. this first paragraph will consume lots of space."
     },
     {
-      "yindex": 3,
+      "yindex": 2,
       "type": "image",
       "value": "https://i.imgur.com/xHuKOms.gif"
     },
     {
+      "yindex": 3,
+      "type": "imageCaption",
+      "value": "No one reads captions anyways, so tpyos are unrlvent"
+    },
+    {
       "yindex": 4,
+      "type": "heading",
+      "value": "Writing blog posts about jest"
+    },
+    {
+      "yindex": 7,
       "type": "text",
       "value": "Writing blog posts about jest can take up a lot of writing space, Writing blog posts about jest can take up a lot of writing space, Writing blog posts about jest can take up a lot of writing space, Writing blog posts about jest can take up a lot of writing space, Writing blog posts about jest can take up a lot of writing space, Writing blog posts about jest can take up a lot of writing space"
     },

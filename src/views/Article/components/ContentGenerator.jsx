@@ -1,34 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
 import RenderGist from 'react-render-gist';
+import Heading from 'elements/Heading'; 
 import {
-  $bold
+  $hoverBlue
 } from 'styleVariables';
 
-const Text = styled.div``;
+const Text = styled.div`
+  margin-top: 40px;
+`;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
   max-height: 500px;
+  margin-top: 40px;
 `;
 
-const Heading = styled.div`
-  font-size: 2rem;
-  font-weight: ${$bold};
-`;
+const ImageCaption = styled.div``;
 
 const ListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 40px;
 `;
 
-const ListItem = styled.div``;
+const MarginWrapper = styled.div`
+  margin-top: 40px;
+`;
+
+const ItemPoint = styled.div`
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-right: 15px;
+  background: ${$hoverBlue}
+`;
+
+const ListItem = styled.div`
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
 
 const List = ({ items }) => (
   <ListWrapper>
-    { items.map(item => <ListItem>{wrapLinksInText(item)}</ListItem>) }
+    { items.map(item => <ListItem><ItemPoint/>{ wrapLinksInText(item)}</ListItem>) }
   </ListWrapper>
 );
 
@@ -51,6 +70,9 @@ export default ({ type, value }) => {
     case "image":
       return <Image src={value} />
 
+    case "imageCaption":
+      return <ImageCaption>{value}</ImageCaption>
+
     case "heading":
       return <Heading>{value}</Heading>
 
@@ -58,7 +80,11 @@ export default ({ type, value }) => {
       return <List items={value} />
 
     case "code":
-      return <RenderGist gist={value} />
+      return (
+        <MarginWrapper>
+          <RenderGist gist={value} />
+        </MarginWrapper>
+      )
 
     default:
       return <div />
